@@ -16,6 +16,7 @@ jobs:
         echo Add other actions to build,
         echo test, and deploy your project.
     - name: ssh pipeline 
+      uses: actions/checkout@v2
       uses: bubeph/test-ci-cd@master
       env:
         WELCOME: "ssh pipeline"
