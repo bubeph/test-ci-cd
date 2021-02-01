@@ -17,11 +17,11 @@ jobs:
         echo test, and deploy your project.
     - name: ssh pipeline 
       uses: actions/checkout@v2
-      uses: bubeph/test-ci-cd@master
+      # uses: bubeph/test-ci-cd@master
       env:
         WELCOME: "ssh pipeline"
         DIR2: "ci-cd.bubeph.com/test-folder"
-      with:
+      with:        
         host: server161.web-hosting.com
         user: bubexctm 
         pass: ddZiTOArK.3r
