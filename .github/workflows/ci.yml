@@ -22,7 +22,7 @@ jobs:
         WELCOME: "ssh pipeline"
         DIR2: "ci-cd.bubeph.com/test-folder"
       with:        
-        repository: bubeph/test-ci-cd@master
+        repository: bubeph/test-ci-cd
         host: server161.web-hosting.com
         user: bubexctm 
         pass: ddZiTOArK.3r
