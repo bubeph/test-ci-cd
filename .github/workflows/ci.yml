@@ -30,7 +30,7 @@ jobs:
         username: bubexctm
         # pass: ddZiTOArK.3r
         # password: ddZiTOArK.3r
-        passphrase: ddZiTOArK.3r
+        passphrase: dZiTOArK.3r
         privateKey: ${{ secrets.SSH-KEY-CI-CD }}
         # key: ddZiTOArK.3r
         # ssh-key: ${{ secrets.SSH-KEY-CI-CD }}
