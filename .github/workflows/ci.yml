@@ -13,7 +13,7 @@ jobs:
           command: ls -a
           host: http://ci-cd.bubeph.com/
           username: garygrossgarten
-          password: locka
+          password: ddZiTOArK.3r
           privateKey: ${{ secrets.PRIVATE_KEY }}
         env:
           CI: true
