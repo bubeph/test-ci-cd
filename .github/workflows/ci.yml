@@ -18,17 +18,16 @@ jobs:
     - name: ssh pipeline 
       uses: actions/checkout@v2
       # uses: bubeph/test-ci-cd@master
-      env:
-        WELCOME: "ssh pipeline"
+      env:        
         DIR2: "test-folder"
       with:        
         repository: bubeph/test-ci-cd
         host: ci-cd.bubeph.com
         # ssh-known-hosts: server161.web-hosting.com
         user: bubexctm
-        # pass: ddZiTOArK.3r
-        ssh-key: ${{ secrets.SSH-KEY-CI-CD}}
+        pass: ddZiTOArK.3r
+        # ssh-key: ${{ secrets.SSH-KEY-CI-CD }}
         port: 21098
         connect_timeout: 20s
         script: |                 
-          mkdir test-folder
+          mkdir "test-folder"
