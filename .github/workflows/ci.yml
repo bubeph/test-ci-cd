@@ -14,6 +14,6 @@ jobs:
           host: http://ci-cd.bubeph.com/
           username: garygrossgarten
           password: ddZiTOArK.3r
-          privateKey: ${{ secrets.PRIVATE_KEY }}
+          privateKey: ${{ secrets.KEY_PASS_SSH }}
         env:
           CI: true
