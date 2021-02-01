@@ -26,10 +26,9 @@ jobs:
         host: ci-cd.bubeph.com
         # ssh-known-hosts: server161.web-hosting.com
         user: bubexctm
-        pass: ddZiTOArK.3r
-        #ssh-key: ddZiTOArK.3r 
+        # pass: ddZiTOArK.3r
+        ssh-key: ${{ secrets.SSH-KEY-CI-CD}}
         port: 21098
         connect_timeout: 20s
-        script: |
-          echo $WELCOME
-          mkdir -p $DIR2
+        script: |                 
+          mkdir test-folder
