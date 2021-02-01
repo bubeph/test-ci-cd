@@ -22,7 +22,8 @@ jobs:
         DIR2: "test-folder"
       with:        
         repository: bubeph/test-ci-cd
-        host: ci-cd.bubeph.com
+        # host: ci-cd.bubeph.com
+        host: server161.web-hosting.com
         # ssh-known-hosts: server161.web-hosting.com
         # user: bubexctm
         username: bubexctm
@@ -31,6 +32,7 @@ jobs:
         # ssh-key: ${{ secrets.SSH-KEY-CI-CD }}
         port: 21098
         #connect_timeout: 20s
-        script: |                 
+        script: |
+          mkdir folder-test                
           whoami
           ls -al
