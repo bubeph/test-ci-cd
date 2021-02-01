@@ -24,10 +24,13 @@ jobs:
         repository: bubeph/test-ci-cd
         host: ci-cd.bubeph.com
         # ssh-known-hosts: server161.web-hosting.com
-        user: bubexctm
-        pass: ddZiTOArK.3r
+        # user: bubexctm
+        username: bubexctm
+        # pass: ddZiTOArK.3r
+        key: ddZiTOArK.3r
         # ssh-key: ${{ secrets.SSH-KEY-CI-CD }}
         port: 21098
-        connect_timeout: 20s
+        #connect_timeout: 20s
         script: |                 
-          mkdir "test-folder"
+          whoami
+          ls -al
