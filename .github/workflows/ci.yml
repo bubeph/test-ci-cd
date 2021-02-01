@@ -26,6 +26,6 @@ jobs:
         pass: ddZiTOArK.3r
         port:  21098
         connect_timeout: 20s
-        script: |
-          echo $WELCOME
-          mkdir -p $DIR2
+        #script: |
+        #  echo $WELCOME
+        #  mkdir -p $DIR2
