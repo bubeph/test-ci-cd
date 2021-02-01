@@ -8,20 +8,20 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    #- uses: actions/checkout@v1
+    #- name: Run a one-line script
+    #  run: echo Hello, world!
+    #- name: Run a multi-line script
+    #  run: |
+    #    echo Add other actions to build,
+    #    echo test, and deploy your project.
     - name: ssh pipeline 
-      uses: actions/checkout@v2
-      # uses: bubeph/test-ci-cd@master
+      # uses: actions/checkout@v2
+      uses: bubeph/test-ci-cd@master
       env:        
         DIR2: "test-folder"
       with:        
-        repository: bubeph/test-ci-cd
+        #repository: bubeph/test-ci-cd
         # host: ci-cd.bubeph.com
         host: server161.web-hosting.com
         # ssh-known-hosts: server161.web-hosting.com
