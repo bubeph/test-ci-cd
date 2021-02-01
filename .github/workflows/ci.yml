@@ -22,11 +22,12 @@ jobs:
         WELCOME: "ssh pipeline"
         DIR2: "ci-cd.bubeph.com/test-folder"
       with:        
+        repository: bubeph/test-ci-cd@master
         host: server161.web-hosting.com
         user: bubexctm 
         pass: ddZiTOArK.3r
         port:  21098
         connect_timeout: 20s
-        #script: |
-        #  echo $WELCOME
-        #  mkdir -p $DIR2
+        script: |
+          echo $WELCOME
+          mkdir -p $DIR2
