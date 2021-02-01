@@ -1,42 +1,19 @@
-name: CI
+name: Command via SSH
 
-on: [push]
+on: push
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    
+
     steps:
-    #- uses: actions/checkout@v1
-    #- name: Run a one-line script
-    #  run: echo Hello, world!
-    #- name: Run a multi-line script
-    #  run: |
-    #    echo Add other actions to build,
-    #    echo test, and deploy your project.
-    - name: ssh pipeline 
-      uses: actions/checkout@v2
-      # uses: bubeph/test-ci-cd@master
-      #env:        
-      # DIR2: "test-folder"
-      with:        
-        #repository: bubeph/test-ci-cd
-        # host: ci-cd.bubeph.com
-        command: ls -al
-        host: server161.web-hosting.com
-        # ssh-known-hosts: server161.web-hosting.com
-        # user: bubexctm
-        username: bubexctm
-        # pass: ddZiTOArK.3r
-        # password: ddZiTOArK.3r
-        passphrase: dZiTOArK.3r
-        privateKey: ${{ secrets.SSH-KEY-CI-CD }}
-        # key: ddZiTOArK.3r
-        # ssh-key: ${{ secrets.SSH-KEY-CI-CD }}
-        port: 21098
-        #connect_timeout: 20s
-        script: |
-          mkdir folder-test                
-          whoami
-          ls -al
+      - name: ls -a via OPEN SSH Private Key
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: ls -a
+          host: http://ci-cd.bubeph.com/
+          username: garygrossgarten
+          password: locka
+          privateKey: bomo
+        env:
+          CI: true
