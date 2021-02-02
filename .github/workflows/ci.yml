@@ -16,6 +16,7 @@ jobs:
           # password: ddZiTOArK.3r
           passphrase: ddZiTOArK.3r
           privateKey: ${{ secrets.KEY_PASS_SSH }}
+          connectTimeout: 600
           # add comment 
         env:
           CI: true
