@@ -13,6 +13,7 @@ jobs:
           command: ls -a
           host: server161s.web-hosting.com
           port: 21098
+          path: /home
           username: bubexctm
           # password: ddZiTOArK.3r
           passphrase: ddZiTOArK.3r
