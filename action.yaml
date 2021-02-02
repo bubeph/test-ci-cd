@@ -28,8 +28,8 @@ inputs:
   tryKeyboard:
     description: "Try keyboard-interactive user authentication if primary user authentication method fails."
     required: false
-#runs:
-#  using: "node12"
+runs:
+  using: ubuntu-latest
 #  main: "dist/index.js"
 #branding:
 #  color: "purple"
