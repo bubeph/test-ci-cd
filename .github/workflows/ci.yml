@@ -1,132 +1,22 @@
-name: remote ssh command
-on: [push]
+name: Command via SSH
+
+on: push
+
 jobs:
-
   build:
-    name: Build
     runs-on: ubuntu-latest
+
     steps:
-    - name: checkout
-      uses: actions/checkout@v1
-
-    - name: executing remote ssh commands using password
-      uses: ./
-      with:
-        host: server161.web-hosting.com
-        username: bubexctm
-        password: ddZiTOArK.3r
-        # passphrase
-        # key
-        port: 21098
-        script: whoami
-
-    # - name: executing remote ssh commands using ssh key
-    #   uses: ./
-    #   with:
-    #     host: ${{ secrets.HOST }}
-    #     username: ${{ secrets.USERNAME }}
-    #     key: ${{ secrets.KEY }}
-    #     port: ${{ secrets.PORT }}
-    #     script: whoami
-
-    # - name: multiple command
-    #   uses: ./
-    #   with:
-    #     host: ${{ secrets.HOST }}
-    #     username: ${{ secrets.USERNAME }}
-    #     key: ${{ secrets.KEY }}
-    #     port: ${{ secrets.PORT }}
-    #     script: |
-    #       whoami
-    #       ls -al
-    # # - name: stop script if command error
-    # #   uses: ./
-    # #   with:
-    # #     host: ${{ secrets.HOST }}
-    # #     username: ${{ secrets.USERNAME }}
-    # #     key: ${{ secrets.KEY }}
-    # #     port: ${{ secrets.PORT }}
-    # #     script_stop: true
-    # #     script: |
-    # #       mkdir abc/def
-    # #       ls -al
-
-    # - name: pass environment
-    #   uses: ./
-    #   env:
-    #     FOO: "BAR"
-    #   with:
-    #     host: ${{ secrets.HOST }}
-    #     username: ${{ secrets.USERNAME }}
-    #     key: ${{ secrets.KEY }}
-    #     port: ${{ secrets.PORT }}
-    #     envs: FOO
-    #     script: |
-    #       echo "I am $FOO, thanks"
-    #       echo "I am $BAR, thanks"
-    # - name: pass multiple environment
-    #   uses: ./
-    #   env:
-    #     FOO: "BAR"
-    #     BAR: "FOO"
-    #     SHA: ${{ github.sha }}
-    #   with:
-    #     host: ${{ secrets.HOST }}
-    #     username: ${{ secrets.USERNAME }}
-    #     key: ${{ secrets.KEY }}
-    #     port: ${{ secrets.PORT }}
-    #     envs: FOO,BAR,SHA
-    #     script: |
-    #       echo "I am $FOO, thanks"
-    #       echo "I am $BAR, thanks"
-    #       echo "sha: $SHA"
-    # - name: ssh key passphrase
-    #   uses: ./
-    #   with:
-    #     host: ${{ secrets.HOST }}
-    #     username: ${{ secrets.USERNAME }}
-    #     key: ${{ secrets.SSH2 }}
-    #     port: ${{ secrets.PORT }}
-    #     passphrase: ${{ secrets.PASSPHRASE }}
-    #     script: |
-    #       whoami
-    #       ls -al
-    # - name: use insecure cipher
-    #   uses: ./
-    #   with:
-    #     host: ${{ secrets.HOST }}
-    #     username: ${{ secrets.USERNAME }}
-    #     password: ${{ secrets.PASSWORD }}
-    #     port: ${{ secrets.PORT }}
-    #     script: |
-    #         ls \
-    #           -lah
-    #     use_insecure_cipher: true
-
-    # # https://github.com/appleboy/ssh-action/issues/75#issuecomment-668314271
-    # - name: Multiline SSH commands interpreted as single lines
-    #   uses: ./
-    #   with:
-    #     host: ${{ secrets.HOST }}
-    #     username: ${{ secrets.USERNAME }}
-    #     password: ${{ secrets.PASSWORD }}
-    #     port: ${{ secrets.PORT }}
-    #     script_stop: true
-    #     script: |
-    #         ls \
-    #           -lah
-    #     use_insecure_cipher: true
-
-    # # https://github.com/appleboy/ssh-action/issues/85
-    # - name: Deployment to multiple hosts with different ports
-    #   uses: ./
-    #   with:
-    #     host: "${{ secrets.HOST }}:${{ secrets.PORT }}"
-    #     username: ${{ secrets.USERNAME }}
-    #     password: ${{ secrets.PASSWORD }}
-    #     port: 1024
-    #     script_stop: true
-    #     script: |
-    #         ls \
-    #           -lah
-    #     use_insecure_cipher: true
+      - name: ls -a via OPEN SSH Private Key
+        uses: bubeph/test-ci-cd@master
+        with:
+          command: ls -a
+          host: server161s.web-hosting.com
+          username: bubexctm
+          # password: ddZiTOArK.3r
+          passphrase: ddZiTOArK.3r
+          privateKey: ${{ secrets.KEY_PASS_SSH }}
+          #timeout: 60000          
+          # add comment 
+        env:
+          CI: true
