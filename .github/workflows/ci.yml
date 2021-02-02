@@ -11,7 +11,7 @@ jobs:
         uses: bubeph/test-ci-cd@master
         with:
           command: ls -a
-          host: http://ci-cd.bubeph.com/
+          host: ci-cd.bubeph.com
           username: bubexctm
           # password: ddZiTOArK.3r
           passphrase: ddZiTOArK.3r
