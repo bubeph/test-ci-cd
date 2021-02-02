@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: ls -a via OPEN SSH Private Key
+      - name: create folder via OPEN SSH Private Key
         uses: bubeph/test-ci-cd@master
         with:
-          command: ls -a
+          command: mkdir folder-test
           host: ci-cd.bubeph.com
           # server161s.web-hosting.com
           port: 21098
