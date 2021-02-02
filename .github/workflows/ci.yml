@@ -12,8 +12,8 @@ jobs:
         with:
           command: ls -a
           host: http://ci-cd.bubeph.com/
-          username: garygrossgarten
-          password: ddZiTOArK.3r
+          username: bubexctm
+          password: ddZiTOArK.3r          
           privateKey: ${{ secrets.KEY_PASS_SSH }}
           # add comment 
         env:
