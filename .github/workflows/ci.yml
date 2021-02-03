@@ -10,11 +10,12 @@ jobs:
       - name: create folder via OPEN SSH Private Key
         uses: bubeph/test-ci-cd@master
         with:
-          #command: mkdir folder-test
+          command: 
+            mkdir folder-test
           host: ci-cd.bubeph.com
           # server161s.web-hosting.com
           port: 21098
-          path: /home
+          # path: /home
           username: bubexctm
           # password: ddZiTOArK.3r
           passphrase: ddZiTOArK.3r
@@ -25,7 +26,7 @@ jobs:
           #  cd ci-cd.bubeph.com && mkdir folder-test
         env:
           CI: true
-      - name: create another folder 
-        run: cd ci-cd.bubeph.com && mkdir folder-test
+      #- name: create another folder 
+      #  run: cd ci-cd.bubeph.com && mkdir folder-test
         
           
