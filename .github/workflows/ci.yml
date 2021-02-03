@@ -11,9 +11,9 @@ jobs:
         uses: bubeph/test-ci-cd@master
         with:
           command:             
-            cd ci-cd.bubeph.com && mkdir folder-test
-            #touch desc.txt
-          repository: bubeph/test-ci-cd@master
+            # cd ci-cd.bubeph.com && mkdir folder-test
+            git clone git@github.com:bubeph/test-ci-cd.git@master                      
+          #repository: bubeph/test-ci-cd@master
           host: ci-cd.bubeph.com
           # server161s.web-hosting.com
           port: 21098
