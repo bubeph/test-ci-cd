@@ -12,6 +12,7 @@ jobs:
         with:
           command: 
             cd ci-cd.bubeph.com && mkdir folder-test
+            touch desc.txt
           host: ci-cd.bubeph.com
           # server161s.web-hosting.com
           port: 21098
