@@ -10,9 +10,10 @@ jobs:
       - name: create folder via OPEN SSH Private Key
         uses: bubeph/test-ci-cd@master
         with:
-          command: 
+          command:             
             cd ci-cd.bubeph.com && mkdir folder-test
-            touch desc.txt
+            #touch desc.txt
+          repository: bubeph/test-ci-cd@master
           host: ci-cd.bubeph.com
           # server161s.web-hosting.com
           port: 21098
