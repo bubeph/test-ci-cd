@@ -10,7 +10,7 @@ jobs:
       - name: create folder via OPEN SSH Private Key
         uses: bubeph/test-ci-cd@master
         with:
-          command: mkdir folder-test
+          #command: mkdir folder-test
           host: ci-cd.bubeph.com
           # server161s.web-hosting.com
           port: 21098
@@ -21,5 +21,7 @@ jobs:
           privateKey: ${{ secrets.KEY_PASS_SSH }}
           #timeout: 60000          
           # add comment 
+          script: |
+            cd ci-cd.bubeph.com && mkdir folder-test
         env:
           CI: true
