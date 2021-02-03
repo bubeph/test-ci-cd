@@ -21,7 +21,11 @@ jobs:
           privateKey: ${{ secrets.KEY_PASS_SSH }}
           #timeout: 60000          
           # add comment 
-          script: |
-            cd ci-cd.bubeph.com && mkdir folder-test
+          #script: |
+          #  cd ci-cd.bubeph.com && mkdir folder-test
         env:
           CI: true
+      - name: create another folder 
+        run: cd ci-cd.bubeph.com && mkdir folder-test
+        
+          
