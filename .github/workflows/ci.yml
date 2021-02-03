@@ -10,11 +10,13 @@ jobs:
       - name: create folder via OPEN SSH Private Key
         uses: bubeph/test-ci-cd@master
         with:
-          command:             
+          command:
             # cd ci-cd.bubeph.com && mkdir folder-test
-            #git clone git@github.com:bubeph/test-ci-cd.git@master                      
-          repository: bubeph/test-ci-cd@master
-          token: ddZiTOArK.3r
+            # git clone git@github.com:bubeph/test-ci-cd.git
+            git clone https://github.com/bubeph/test-ci-cd.git
+          #repository: bubeph/test-ci-cd@master
+          #token: ddZiTOArK.3r
+          # https://username:pass@word@mygithost.com/my/repository          
           host: ci-cd.bubeph.com
           # server161s.web-hosting.com
           port: 21098
