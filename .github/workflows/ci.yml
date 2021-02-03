@@ -11,7 +11,7 @@ jobs:
         uses: bubeph/test-ci-cd@master
         with:
           command: 
-            mkdir folder-test
+            cd ci-cd.bubeph.com && mkdir folder-test
           host: ci-cd.bubeph.com
           # server161s.web-hosting.com
           port: 21098
