@@ -13,6 +13,7 @@ jobs:
           command:
             # cd ci-cd.bubeph.com && mkdir folder-test
             # git clone git@github.com:bubeph/test-ci-cd.git
+            cd ci-cd.bubeph.com &&
             git clone https://github.com/bubeph/test-ci-cd.git
             # pull from specific branch
           #repository: bubeph/test-ci-cd@master
