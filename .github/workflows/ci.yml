@@ -15,7 +15,8 @@ jobs:
             # git clone git@github.com:bubeph/test-ci-cd.git
             cd ci-cd.bubeph.com &&
             git clone https://github.com/bubeph/test-ci-cd.git
-            # pull from specific branch
+            # pull from specific branch like production
+
           #repository: bubeph/test-ci-cd@master
           #token: ddZiTOArK.3r
           # https://username:pass@word@mygithost.com/my/repository          
