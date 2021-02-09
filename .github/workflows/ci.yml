@@ -14,7 +14,8 @@ jobs:
             # cd ci-cd.bubeph.com && mkdir folder-test
             # git clone git@github.com:bubeph/test-ci-cd.git
             cd ci-cd.bubeph.com &&
-            git clone https://github.com/bubeph/test-ci-cd.git
+            mkdir folder_1
+            # git clone https://github.com/bubeph/test-ci-cd.git
             # pull from specific branch like production
 
           #repository: bubeph/test-ci-cd@master
@@ -34,7 +35,11 @@ jobs:
           #  cd ci-cd.bubeph.com && mkdir folder-test
         env:
           CI: true
-      #- name: create another folder 
+      - name: lunch another command
+        with:
+          command:
+          #cd ci-cd.bubeph.com &&
+          mkdir folder_2
       #  run: cd ci-cd.bubeph.com && mkdir folder-test
         
           
