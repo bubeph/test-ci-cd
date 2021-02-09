@@ -38,8 +38,8 @@ jobs:
       - name: lunch another command
         with:
           command:
-          #cd ci-cd.bubeph.com &&
-          mkdir folder_2
-      #  run: cd ci-cd.bubeph.com && mkdir folder-test
+            #cd ci-cd.bubeph.com &&
+            mkdir folder_2
+#  run: cd ci-cd.bubeph.com && mkdir folder-test
         
           
