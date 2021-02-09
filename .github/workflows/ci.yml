@@ -36,6 +36,7 @@ jobs:
         env:
           CI: true
       - name: lunch another command
+        uses: bubeph/test-ci-cd@master
         with:
           command:
             #cd ci-cd.bubeph.com &&
